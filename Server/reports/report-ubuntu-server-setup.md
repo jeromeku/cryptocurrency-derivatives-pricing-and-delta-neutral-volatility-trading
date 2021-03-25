@@ -58,14 +58,14 @@ cd # back home
 ```
 
 ## Add the Python script
-Add [`../0_server/src/option-data-download.py`](../src/option-data-download.py) Python script to Ubuntu remote server by copying and pasting it after opening pico.
+Add [`../src/option-data-download.py`](../src/option-data-download.py) Python script to Ubuntu remote server by copying and pasting it after opening pico.
 ```bash
 cd src
 pico option-data-download.py  #copy and paste the source code
 ```
 
 ## Add the SHELL script
-Add [`../0_server/src/move-files.sh`](../src/move-files.sh) SHELL script to Ubuntu remote server by copying and pasting if after opening pico.
+Add [`../src/move-files.sh`](../src/move-files.sh) SHELL script to Ubuntu remote server by copying and pasting if after opening pico.
 ```bash
 cd src
 pico move-files.sh  #copy and paste the source code
@@ -78,7 +78,7 @@ Access the crontab page and then execute the copy and paste the commands that fo
 crontab -e
 ```
 
-Run the python script [`../0_server/src/option-data-download.py`](../src/option-data-download.py) every 5 minutes and add `.log` file for traceback in the `../logs` directory.
+Run the python script [`../src/option-data-download.py`](../src/option-data-download.py) every 5 minutes and add `.log` file for traceback in the `../logs` directory.
 
 ```bash
 # download option data every 5 minutes and store log files
@@ -109,7 +109,7 @@ Zip the `../csv_files/btc_option_data.csv` and the `../csv_files/eth_option_data
 5 0 * * * zip -9 -r eth_option_data.zip ./csv_files/eth_option_data.csv
 ```
 
-Rename the zipped files and move Bitcoin data into `../zip_files/btc_option_data` and Ethereum data into `../zip_files/eth_option_data` using the `SHELL` script [`/src/move-files.sh`](../src/move-files.sh). 
+Rename the zipped files and move Bitcoin data into `../zip_files/btc_option_data` and Ethereum data into `../zip_files/eth_option_data` using the `SHELL` script [`../src/move-files.sh`](../src/move-files.sh). 
 The files are renamed with the date of the day the data was downloaded.
 
 ```bash
