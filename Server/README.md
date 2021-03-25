@@ -9,7 +9,7 @@ In these scripts are described both the codes and the intuition behind them.
 
 Folder structure:
 ~~~~
-    ../server/
+    ../Server/
         src/
             option-data-download.py
             move-files.sh
