@@ -1,6 +1,6 @@
 # Walk through the code
 
-#### Last Update March 24, 2021 ####
+#### Last Update March 25, 2021 ####
 #### Matteo Bottacini, [matteo.bottacini@usi.ch](mailto:matteo.bottacini@usi.ch) ####
 
 ## Project description
@@ -52,7 +52,7 @@ def create_env(local_folder):
     if not os.path.exists(sub_directory):
         os.mkdir(sub_directory)
 
-    # create /csv
+    # create /data
     destination_path = destination_path.replace('zip_files', 'data')
     if not os.path.exists(destination_path):
         os.mkdir(destination_path)
@@ -92,7 +92,7 @@ These variables have to be changed in [`../src/credentials.py`](../src/credentia
 
 ```python
 # complete with your credentials
-host = "host.com"
+host = "host"
 port = 22
 username = "username"
 password = "****"
@@ -174,7 +174,7 @@ The next steps are:
 
 The process to unzip all the files consists in a loop through the items in the `../zip_files` directory in order to decompress them, extract all the data and store them in `pandas.DataFrame`.
 
-At the end of every iteration, once the data are unzipped the original `.zip` file is deleted and the new `pandas.DataFrame` is converted into a `.ftr` file using `LZ4` compression method and then moved to its final folder in the `../data/` directory. 
+At the end of every iteration, once the data are unzipped the original `.zip` file is deleted and the new `pandas.DataFrame` is converted into a `.ftr` file using `ZSTD` compression method and then moved to its final folder in the `../data/` directory. 
 
 Once the `pandas.DataFrame` is feathered the `../zip_files` directory is removed, and the environment cleaned.
 
@@ -220,7 +220,7 @@ Summarizing: either Parquet and Feathers store the same data saving more than 50
 
 ![](../reports/images/storage.png)
 
-### Read and Write time
+#### Read and Write time
 Parquet is ranked 5th to read into an Arrow Table and both Feather and Pickle are faster. 
 Feather with compression is even faster to read. 
 This is partly because the files are much smaller on disk.
@@ -305,9 +305,9 @@ def clean_data_and_env(local_folder):
             # delete zipped file
             os.remove(file_name)
 
-    # convert pandas to feather LZ4 file
+    # convert pandas to feather ZSTD file
     local_path = source_path.replace(local_folder, 'data/btc_option_data.ftr')
-    feather.write_feather(btc_data_df, local_path, compression='lz4')
+    feather.write_feather(btc_data_df, local_path, compression='zstd')
     print('btc_option_data.ftr created')
 
     # unzip ethereum data
@@ -338,9 +338,9 @@ def clean_data_and_env(local_folder):
             zip_ref.close()
             os.remove(file_name)
 
-    # convert pandas to feather LZ4 file
-    local_path = source_path.replace(local_folder, 'data/eth_option_data_lz4.ftr')
-    feather.write_feather(eth_data_df, local_path, compression='lz4')
+    # convert pandas to feather ZSTD file
+    local_path = source_path.replace(local_folder, 'data/eth_option_data.ftr')
+    feather.write_feather(eth_data_df, local_path, compression='zstd')
     print('eth_option_data.ftr created')
 
     # clean the environment: remove zip_files directory
