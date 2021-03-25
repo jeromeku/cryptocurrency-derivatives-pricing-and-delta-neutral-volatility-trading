@@ -28,8 +28,8 @@ thesis_bottacini_codes/
 The first step is to set up the remote Ubuntu server to download and store the financial data needed.
 In these scripts are described both the codes and the intuition behind them.
 
-* This is the [working directory](../Server)
-* This is the [README.md](../Server/README.md)
+* This is the [working directory](/Server)
+* This is the [README.md](/Server/README.md)
 
 ## Spot Implied Volatility surface analysis
 The second step is to analyse current option data and visualize the implied volatility structure. 
