@@ -1,6 +1,6 @@
 # Cryptocurrency Derivatives Pricing
 
-#### Last Update March 24, 2021 ####
+#### Last Update March 25, 2021 ####
 #### Matteo Bottacini, [matteo.bottacini@usi.ch](mailto:matteo.bottacini@usi.ch) ####
 
 
@@ -35,12 +35,12 @@ In these scripts are described both the codes and the intuition behind them.
 The second step is to analyse current option data and visualize the implied volatility structure. 
 In these scripts are described both the codes and the intuition behind them.
 
-* This is the [working directory](../thesis_bottacini_codes/SpotImpliedVolatilitySurfaceAnalysis)
-* This is the [README.md](../thesis_bottacini_codes/SpotImpliedVolatilitySurfaceAnalysis/README.md)
+* This is the [working directory](/SpotImpliedVolatilitySurfaceAnalysis)
+* This is the [README.md](/SpotImpliedVolatilitySurfaceAnalysis/README.md)
 
 ## Get Remote Server data
 The third step is to get option data from the remote server and to store them locally to perform the time series analysis.
 In these scripts are described both the codes and the intuition behind them.
 
-* This is the [working directory](../thesis_bottacini_codes/GetServerData)
-* This is the [README.md](../thesis_bottacini_codes/GetServerData/README.md)
+* This is the [working directory](/GetServerData)
+* This is the [README.md](/GetServerData/README.md)
