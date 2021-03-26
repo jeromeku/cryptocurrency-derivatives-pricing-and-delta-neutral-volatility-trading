@@ -11,7 +11,7 @@ Data are collected on an Ubuntu remote server with the implementation of `Python
 
 Folder structure:
 ~~~~
-thesis_bottacini_codes/
+cryptocurrency-derivatives-pricing/
     Server/
     SpotImpliedVolatilitySurfaceAnalysis/
     GetServerData/
