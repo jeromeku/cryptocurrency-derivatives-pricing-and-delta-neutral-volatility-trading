@@ -68,5 +68,5 @@ In these scripts are described both the codes and the intuition behind them.
 The fifth and final step is to back-test a Delta-Neutral Volatility Trading strategy to statistically profit from the implied volatility deviations from the implied volatility long-run value.
 In these scripts are described both the codes and the intuition behind them.
 
-* This is the [working directory](/GetServerData)
-* This is the [README.md](/GetServerData/README.md)
+* This is the [working directory](/DeltaHedging)
+* This is the [README.md](/DeltaHedging/README.md)
