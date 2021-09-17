@@ -39,34 +39,34 @@ thesis_bottacini_codes/
 The first step is to set up the remote Ubuntu server to download and store the financial data needed.
 In these scripts are described both the codes and the intuition behind them.
 
-* This is the [working directory](../master_thesis_codes/Server)
-* This is the [README.md](../master_thesis_codes/Server/README.md)
+* This is the [working directory](/Server)
+* This is the [README.md](/Server/README.md)
 
 ## Get Remote Server data
 The second step is to get option data from the remote server and to store them locally to perform the time analysis.
 In these scripts are described both the codes and the intuition behind them.
 
-* This is the [working directory](../master_thesis_codes/GetServerData)
-* This is the [README.md](../master_thesis_codes/GetServerData/README.md)
+* This is the [working directory](/GetServerData)
+* This is the [README.md](/GetServerData/README.md)
 
 
 ## Spot Derivatives Analysis
 The third step is to analyse current option data and visualize the results.
 In these scripts are described both the codes and the intuition behind them.
 
-* This is the [working directory](../master_thesis_codes/SpotAnalysis)
-* This is the [README.md](../master_thesis_codes/SpotAnalysis/README.md)
+* This is the [working directory](/SpotAnalysis)
+* This is the [README.md](/SpotAnalysis/README.md)
 
 ##  Time-Series Derivatives Analysis
 The fourth step is to analyze the crypto derivatives time-series and to prepare the data for the trading-strategy back-test.
 In these scripts are described both the codes and the intuition behind them.
 
-* This is the [working directory](../master_thesis_codes/TimeSeriesAnalysis)
-* This is the [README.md](../master_thesis_codes/TimeSeriesAnalysis/README.md)
+* This is the [working directory](/TimeSeriesAnalysis)
+* This is the [README.md](/TimeSeriesAnalysis/README.md)
 
 ## Delta-Neutral Volatility Trading
 The fifth and final step is to back-test a Delta-Neutral Volatility Trading strategy to statistically profit from the implied volatility deviations from the implied volatility long-run value.
 In these scripts are described both the codes and the intuition behind them.
 
-* This is the [working directory](../master_thesis_codes/GetServerData)
-* This is the [README.md](../master_thesis_codes/GetServerData/README.md)
+* This is the [working directory](/GetServerData)
+* This is the [README.md](/GetServerData/README.md)
